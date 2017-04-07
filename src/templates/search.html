@@ -1,0 +1,56 @@
+<div style="height:100%; overflow-y: scroll">
+    <div class="intro-box">
+        <h3>机械设计领域文本分词</h3>
+        <textarea class="form-control" type="text" rows="5" ng-model="vm.senStrCUT"></textarea>
+        <span>分词结果：
+    </span>
+        <div>
+            {{vm.cutRes}}
+        </div>
+        <div>
+            <button class="pull-right btn btn-primary" ng-click="vm.uploadToCUT()">提交</button>
+            <button class="pull-right btn btn-danger" ng-click="vm.cleanCUR()">清空</button>
+        </div>
+    </div>
+    <div class="intro-box">
+        <h3>机械设计命名实体识别</h3>
+        <textarea class="form-control" type="text" rows="5" ng-model="vm.senStrNER"></textarea>
+        <span>识别的实体：
+        <label ng-if="vm.nerRes.length">
+            PM-零件名 TO-工具 PARAM-参数 PRC-加工
+        </label>
+    </span>
+        <div>
+            <label class="label-primary ner-label" ng-repeat="item in vm.nerRes">
+                <small>{{item}}</small>
+            </label>
+        </div>
+        <div>
+            <button class="pull-right btn btn-primary" ng-click="vm.uploadToNER()">提交</button>
+            <button class="pull-right btn btn-danger" ng-click="vm.cleanNRE()">清空</button>
+        </div>
+    </div>
+    <div class="intro-box">
+        <h3>机械设计实体关系抽取</h3>
+        <textarea class="form-control" type="text" rows="5" ng-model="vm.senStrRE"></textarea>
+        <span>抽取得到的关系：</span>
+        <div>
+            <button class="pull-right btn btn-primary" ng-click="vm.uploadToRE()">提交</button>
+            <button class="pull-right btn btn-danger" ng-click="vm.cleanRE()">清空</button>
+        </div>
+    </div>
+    <div class="intro-box">
+        <h3>搜索展示</h3>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="搜索实体" ng-model="vm.key">
+            <span style="cursor: pointer" class="input-group-addon" ng-click="vm.searchKey(vm.key)">搜索</span>
+        </div>
+        <div ng-if="vm.showWarning">
+            <small class="text-warning">*请输入搜索内容</small>
+        </div>
+        <small>eg. 螺纹联接</small>
+        <div>
+            <!--angular-d3插件做可视化展示-->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<div style="height:100%; overflow-y: scroll">
+    <h3>API接口</h3>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>/getAllInfo</h4>
+        </div>
+        <div class="panel-body">
+            <p>以 json 数据格式格式返回图谱中所有关系-节点-关系</p>
+            <h4>URL</h4>
+            <p>http://118.89.146.26:9090/getAllInfo</p>
+            <h4>Demo</h4>
+            <a href="http://118.89.146.26:80/getAllInfo">获取所有实体-关系-实体三元组</a>
+            <p></p>
+            <h4>Example</h4>
+            <a href="http://118.89.146.26:80/getAllInfo">
+                http://118.89.146.26:9090/getAllInfo
+            </a>
+            <p>返回知识图谱中所有的实体-关系-实体对</p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>/getAllNodes</h4>
+        </div>
+        <div class="panel-body">
+            <p> 以 json 数据格式返回知识图谱中所有实体节点</p>
+            <h4>URL</h4>
+            <p>http://118.89.146.26:9090/getAllNodes</p>
+            <h4>Demo</h4>
+            <a href="http://118.89.146.26:9090/getAllNodes">获取所有节点信息</a>
+            <p></p>
+            <h4>Example</h4>
+            <a href="http://118.89.146.26:9090/getAllNodes">
+                http://118.89.146.26:9090/getAllNodes
+            </a>
+            <p>返回知识图谱中所有的实体</p>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>/uploadToCUT</h4>
+        </div>
+        <div class="panel-body">
+            <p>接口输入为待分词的机械设计语料文本，返回分词后文本</p>
+            <h4>URL</h4>
+            <p>http://118.89.146.26:9090/uploadToCUT</p>
+            <h4>Demo</h4>
+            <button class="btn btn-info" ng-click="vm.showDemoCut()">机械语料分词API调用</button>
+            <button ng-if="vm.showCutAPI" class="btn btn-danger" ng-click="vm.showCutAPI=false">关闭</button>
+            <div ng-if="vm.showCutAPI">
+                <div>
+
+                </div>
+                    <pre>
+请求体：
+    Request URL:http://localhost:8080/uploadToCUT
+    Request Method:POST
+    Access-Control-Allow-Origin:http://localhost:63343
+    Content-Length:1165
+    Content-Type:application/json
+    Date:Wed, 05 Apr 2017 07:12:28 GMT
+    Server:Werkzeug/0.11.15 Python/3.5.2
+    Accept:application/json, text/plain, */*
+    Accept-Encoding:gzip, deflate, br
+    Accept-Language:zh-CN,zh;q=0.8
+    Connection:keep-alive
+    Content-Length:454
+    Content-Type:application/json;charset=UTF-8
+    Host:localhost:8080
+    Origin:http://localhost:63343
+    Request Payload:
+    {"senStr":"在圆柱或圆锥母体表面上制出的螺旋线形的、具有特定截面的连续凸起部分。螺纹按其母体形状分为圆柱螺纹和圆锥螺纹；
+        按其在母体所处位置分为外螺纹、内螺纹，按其截面形状（牙型）分为三角形螺纹、矩形螺纹、梯形螺纹、锯齿形螺纹及其他特殊形状螺纹。
+        在圆柱或圆锥表面上，沿着螺旋线所形成的具有规定牙型的连续凸起。"}
+响应体：
+    {
+        'res': '在 / 圆柱 / 或 / 圆锥 / 母体 / 表面 / 上 / 制出 / 的 / 螺旋线 / 形 / 的 / 、 / 具有 / 特定 / 截面 / 的 / 连续 / 凸起 / 部分 / 。
+                / 螺纹 / 按 / 其 / 母体 / 形状 / 分为 / 圆柱 / 螺纹 / 和 / 圆锥 / 螺纹 / ； / 按 / 其 / 在 / 母体 / 所 / 处 / 位置 / 分为 / 外螺纹 / 、 / 内螺纹 / ，
+                / 按 / 其 / 截面 / 形状 / （ / 牙型 / ） / 分为 / 三角形 / 螺纹 / 、 / 矩形 / 螺纹 / 、 / 梯形 / 螺纹 / 、 / 锯齿形 / 螺纹 / 及其 / 他 / 特殊 / 形状 / 螺纹 / 。
+                / 在 / 圆柱 / 或 / 圆锥 / 表面 / 上 / ， / 沿着 / 螺旋线 / 所 / 形成 / 的 / 具有 / 规定 / 牙型 / 的 / 连续 / 凸起 /'
+    }
+                    </pre>
+            </div>
+        </div>
+    </div>
+</div>

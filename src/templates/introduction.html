@@ -1,0 +1,81 @@
+<div style="height:100%; overflow-y: scroll">
+    <div class="intro-box">
+        <nvd3 options="vm.options" data="vm.data" class="with-3d-shadow with-transitions"></nvd3>
+    </div>
+
+    <div class="intro-box">
+        <h3>机械设计知识图谱</h3>
+        <small>机械设计知识图谱简介</small>
+        <div class="info-box">
+            机械设计知识图谱可通过数据可视化技术对机械设计知识提供查询展示，也可嵌入语义搜索、语义维基等系统提供服务。
+            可视化语义图可以形象地表达机械设计领域实体概念之间的关联关系，用户可以通过交互的方式来查询和学习机械设计知识。
+            机械设计领域知识图谱能增强机械设计知识资源的联通性，支持用户在概念层次上浏览领域知识资源，
+            帮助用户发现机械设计领域概念或知识资源之间的潜在联系，可充分提高机械设计效率。
+        </div>
+    </div>
+
+    <div class="intro-box">
+        <h3>机械设计知识图谱统计</h3>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>统计项</th>
+                <th>数量</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>实体数</td>
+                <td>{{vm.totalNodeNum}}</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Entity-Information关系数</td>
+                <td>{{vm.totalRelNum}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="intro-box">
+        <h3>更新记录</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>更新日期</th>
+                    <th>统计项</th>
+                    <th>贡献者</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2017/03/04</td>
+                    <td>系统框架搭建，前端 AngularJS 后端 Python-Flask-Nginx</td>
+                    <td>Baymax</td>
+                </tr>
+                <tr>
+                    <td>2017/03/19</td>
+                    <td>OWL 解析存储</td>
+                    <td>Baymax</td>
+                </tr>
+                <tr>
+                    <td>2017/03/19</td>
+                    <td>实体及关系前端可视化展示</td>
+                    <td>Baymax</td>
+                </tr>
+                <tr>
+                    <td>2017/03/21</td>
+                    <td>NER 模块整合加入</td>
+                    <td>Baymax</td>
+                </tr>
+                <tr>
+                    <td>2017/03/29</td>
+                    <td>系统本地测试完毕，部署到腾讯云服务器</td>
+                    <td>Baymax</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

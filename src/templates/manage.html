@@ -1,0 +1,45 @@
+<div class="intro-box">
+    <h3>知识图谱管理</h3>
+    <div class="info-box">
+        <h4>新增实体Entity/关系Relationship</h4>
+        <div class="uploadFile">
+            <h5>上传原始语料文本</h5>
+            <div>
+                <form name="uploadTxt">
+                    <button class="btn btn-info" ngf-select ng-model="vm.txtFile" name="txtFile" ngf-max-size="20MB">
+                        选择要上传的原始语料文本
+                    </button>
+                    <button class="btn btn-primary" type="submit" ng-disabled="!vm.txtFile"
+                                ng-click="vm.submitTxt()">提交</button>
+                </form>
+            </div>
+            <span> 文件名：</span>
+            <div>{{vm.txtFile.name}}</div>
+            <div ng-if="vm.notTxt">
+                <small class="text-danger">***上传文本必须为 txt 格式文本***</small>
+            </div>
+        </div>
+        <div class="uploadFile">
+            <h5>直接上传owl文本</h5>
+            <div>
+                <form name="uploadOwl">
+                    <button class="btn btn-info" ngf-select ng-model="vm.owlFile" name="owlFile" ngf-max-size="20MB">
+                        选择要上传的owl文本
+                    </button>
+                    <button class="btn btn-primary" type="submit" ng-disabled="!vm.owlFile"
+                                    ng-click="vm.submitOwl()">提交</button>
+                </form>
+            </div>
+            <span> 文件名：</span>
+            <div>{{vm.owlFile.name}}</div>
+            <div ng-if="vm.notOwl">
+                <small class="text-danger">***上传文本必须为 owl 格式文本***</small>
+            </div>
+        </div>
+    </div>
+    <div class="info-box">
+        <h4>修改实体Entity/关系Relationship</h4>
+        <label for="cypherCommand">cypher命令</label>
+        <input type="text" class="form-control" id="cypherCommand"/>
+    </div>
+</div>
